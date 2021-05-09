@@ -1,2 +1,3 @@
 convolution_simple/train/
 convolution_simple/validate/
+*.DS_Store
