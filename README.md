@@ -27,3 +27,30 @@ Credit - [CNN](https://towardsdatascience.com/a-comprehensive-guide-to-convoluti
   - Train
   - Saving the resulting Model and weights in respective Folders created
   - Plot the history of training and validation/test error and save them under graph folder
+
+- Structure of the Convolution Network:
+  - Convolution layer 1
+      >model = Sequential()<br>
+      >model.add(Conv2D(32, (3, 3), input_shape=(image_dim, image_dim, 3)))<br>
+      >model.add(Activation('relu'))<br>
+      >model.add(MaxPooling2D(pool_size=(2, 2)))<br>
+  - Convolution layer 2
+      >model.add(Conv2D(32, (3, 3)))<br>
+      >model.add(Activation('relu'))<br>
+      >model.add(MaxPooling2D(pool_size=(2, 2)))<br>
+  - Convolution layer 3
+      >model.add(Conv2D(64, (3, 3)))<br>
+      >model.add(Activation('relu'))<br>
+      >model.add(MaxPooling2D(pool_size=(2, 2)))<br>
+  - Dense Layer
+      >model.add(Flatten()) # this produces 1D feature vector<br>
+      >model.add(Dense(64))<br>
+      >model.add(Activation('relu'))<br>
+  - Output layer
+      >model.add(Dense(1))<br>
+      >model.add(Activation('sigmoid'))<br>
+
+*Go through the conv_net_catsdogs.py file for full code*
+
+Note :- File and Directory details are provided in file.docx 
+
