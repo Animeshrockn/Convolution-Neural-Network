@@ -113,41 +113,41 @@ model.compile(loss='binary_crossentropy',
 model.summary()
 
 
-# ---- train the model ----
-# batch_size = 128
-# num_epochs = 10
+---- train the model ----
+batch_size = 128
+num_epochs = 10
 
-# history = model.fit_generator(datagen.flow(x_train, y_train, batch_size=batch_size),
-#                     steps_per_epoch=len(x_train) / batch_size, epochs=num_epochs,
-#                     validation_data=datagen.flow(x_valid, y_valid, batch_size=batch_size),
-#                     validation_steps = len(x_valid) / batch_size)
-
-
-
-# # ---- save the model and the weights ----
-# model.save('convnet_catsdogs.h5')
-# model.save_weights('convnet_catsdogs_weights.h5')
-# print('model saved')
+history = model.fit_generator(datagen.flow(x_train, y_train, batch_size=batch_size),
+                    steps_per_epoch=len(x_train) / batch_size, epochs=num_epochs,
+                    validation_data=datagen.flow(x_valid, y_valid, batch_size=batch_size),
+                    validation_steps = len(x_valid) / batch_size)
 
 
-# # ---- display history ----
-# # list all data in history
-# print(history.history.keys())
-# # summarize history for accuracy
-# plt.plot(history.history['accuracy'])
-# plt.plot(history.history['val_accuracy'])
-# plt.ylabel('accuracy')
-# plt.xlabel('epoch')
-# plt.legend(['train', 'test'], loc='upper left')
-# plt.savefig('train_test_accuracy.png')
-# plt.clf() # clear figure
-# plt.show()
-# # summarize history for loss (binary cross-entropy)
-# plt.plot(history.history['loss'])
-# plt.plot(history.history['val_loss'])
-# plt.ylabel('binary cross-entropy')
-# plt.xlabel('epoch')
-# plt.legend(['train', 'test'], loc='upper left')
-# plt.savefig('train_test_loss.png')
-# plt.clf()
-# plt.show()
+
+# ---- save the model and the weights ----
+model.save('saved_model/convnet_catsdogs.h5')
+model.save_weights('saved_weights/convnet_catsdogs_weights.h5')
+print('model saved')
+
+
+# ---- display history ----
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.savefig('graph/train_test_accuracy.png')
+plt.clf() # clear figure
+plt.show()
+# summarize history for loss (binary cross-entropy)
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.ylabel('binary cross-entropy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.savefig('graph/train_test_loss.png')
+plt.clf()
+plt.show()

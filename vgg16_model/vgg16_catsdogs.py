@@ -121,8 +121,8 @@ history = model.fit_generator(datagen.flow(x_train, y_train, batch_size=batch_si
 
 
 # ---- save the model and the weights ----
-model.save('vgg16_catsdogs.h5')
-model.save_weights('vgg16_catsdogs_weights.h5')
+model.save('saved_model/vgg16_catsdogs.h5')
+model.save_weights('saved_weight/vgg16_catsdogs_weights.h5')
 print('model saved')
 
 
