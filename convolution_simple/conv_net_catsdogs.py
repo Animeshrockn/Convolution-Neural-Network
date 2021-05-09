@@ -123,8 +123,8 @@ history = model.fit_generator(datagen.flow(x_train, y_train, batch_size=batch_si
 
 
 # ---- save the model and the weights ----
-model.save('convnet_catsdogs.h5')
-model.save_weights('convnet_catsdogs_weights.h5')
+model.save('saved_model/convnet_catsdogs.h5')
+model.save_weights('saved_weight/convnet_catsdogs_weights.h5')
 print('model saved')
 
 
