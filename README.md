@@ -50,6 +50,16 @@ Credit - [CNN](https://towardsdatascience.com/a-comprehensive-guide-to-convoluti
       >model.add(Dense(1))<br>
       >model.add(Activation('sigmoid'))<br>
 
+**Accuracy:**
+Accuracy for all variations in Convolution network is provided below:
+
+1. Simple Convolution Neural Network - 85%
+2. Convolution Neural Network with L2 Norm - 86%
+3. VGG16 Network - 96%%
+4. Transfer Learning Model with Imagenet - 97%
+
+*Note :- All the accuracies are approximate with Uncertaininty of 1%*
+
 *Go through the conv_net_catsdogs.py file for full code*
 
 Note :- File and Directory details are provided in file.docx 
